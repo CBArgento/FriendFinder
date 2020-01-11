@@ -1,4 +1,4 @@
-var friends = required("../data/friends.js");
+var friends = require("./friends.js");
 
 module.exports = function (app) {
 
@@ -54,6 +54,7 @@ module.exports = function (app) {
     friends.push(userScores);
 
     // Return a JSON with the user's bestMatch. This will be used by the HTML in the next page
+    console.log("best" + bestMatch);
     res.json(bestMatch);    
     });
 
